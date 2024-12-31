@@ -6,11 +6,11 @@ import {
 } from "react";
 import css from "./ImageModal.module.css";
 import Modal from "react-modal";
-import { ImageModalType } from "../../types";
+import { ImageModalProps } from "../../types";
 
 Modal.setAppElement("#root");
 
-const ImageModal: FC<ImageModalType> = ({
+const ImageModal: FC<ImageModalProps> = ({
   imageInfo,
   isModalOpen,
   onCloseModal,

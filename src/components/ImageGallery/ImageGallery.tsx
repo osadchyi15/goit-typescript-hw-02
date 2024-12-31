@@ -1,9 +1,9 @@
 import { FC } from "react";
-import { ImageGalleryType } from "../../types";
+import { ImageGalleryProps } from "../../types";
 import ImageCard from "../ImageCard/ImageCard";
 import s from "./ImageGallery.module.css";
 
-const ImageGallery: FC<ImageGalleryType> = ({ data, imageHandler }) => {
+const ImageGallery: FC<ImageGalleryProps> = ({ data, imageHandler }) => {
   return (
     <ul className={s.itemsList}>
       {data.map((item, index) => (

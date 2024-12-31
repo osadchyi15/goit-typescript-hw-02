@@ -1,8 +1,8 @@
-import { SearchBarType } from "../../types";
+import { SearchBarProps } from "../../types";
 import s from "./SearchBar.module.css";
 import { useState, ChangeEvent, FC } from "react";
 
-const SearchBar: FC<SearchBarType> = ({ onSearchChanged, clientQuery }) => {
+const SearchBar: FC<SearchBarProps> = ({ onSearchChanged, clientQuery }) => {
   const [value, setValue] = useState<string>("");
 
   const handleSubmit = (e: ChangeEvent<HTMLFormElement>): void => {

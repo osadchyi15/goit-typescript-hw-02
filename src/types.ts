@@ -18,7 +18,7 @@ export interface Response {
 }
 
 export interface ImageInfo {
-  fullUrl: string | undefined;
+  fullUrl: string;
   alt: string;
 }
 
@@ -33,29 +33,29 @@ export interface ToastPosition {
   reverseOrder: boolean;
 }
 
-export type ImageGalleryType = {
+export type ImageGalleryProps = {
   data: Items;
   imageHandler: (e: MouseEvent<HTMLImageElement>) => void;
 };
 
-export type ImageCardType = {
+export type ImageCardProps = {
   item: Item;
   imageHandler: (e: MouseEvent<HTMLImageElement>) => void;
 };
 
-export type ImageModalType = {
+export type ImageModalProps = {
   imageInfo: ImageInfo;
   isModalOpen: boolean;
   onCloseModal: () => void;
 };
 
-export type MoreBtnType = {
+export type MoreBtnProps = {
   onClick: () => void;
 };
 
-export type SearchBarType = {
+export type SearchBarProps = {
   onSearchChanged: (newQuery: string) => void;
   clientQuery: string;
 };
 
-export type TopButtonType = { onClickTopButton: () => void };
+export type TopButtonProps = { onClickTopButton: () => void };

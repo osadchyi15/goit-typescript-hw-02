@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { ImageCardType } from "../../types";
+import { ImageCardProps } from "../../types";
 import s from "./ImageCard.module.css";
 
-const ImageCard: FC<ImageCardType> = ({ item, imageHandler }) => {
+const ImageCard: FC<ImageCardProps> = ({ item, imageHandler }): JSX.Element => {
   return (
     <>
       <img
