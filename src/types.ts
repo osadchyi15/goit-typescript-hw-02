@@ -18,7 +18,7 @@ export interface Response {
 }
 
 export interface ImageInfo {
-  fullUrl: string;
+  fullUrl: string | undefined;
   alt: string;
 }
 
