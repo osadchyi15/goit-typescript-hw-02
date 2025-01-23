@@ -67,6 +67,6 @@ export interface FetchParams {
 }
 
 export interface Response {
-  results: [];
+  results: Items;
   total_pages: number;
 }
