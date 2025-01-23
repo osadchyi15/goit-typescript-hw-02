@@ -59,3 +59,14 @@ export type SearchBarProps = {
 };
 
 export type TopButtonProps = { onClickTopButton: () => void };
+
+export interface FetchParams {
+  query: string;
+  page: number;
+  per_page: number;
+}
+
+export interface Response {
+  results: [];
+  total_pages: number;
+}

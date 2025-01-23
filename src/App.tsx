@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 import ImageModal from "./components/ImageModal/ImageModal";
 import ToTopButton from "./components/ToTopButton/ToTopButton";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
-import { Items, ImageInfo, ToastPosition } from "./types";
+import { Items, ImageInfo, ToastPosition, Response } from "./types";
 
 const App: FC = () => {
   const [responseData, setResponseData] = useState<Items>([]);
@@ -46,11 +46,12 @@ const App: FC = () => {
         setIsLoading(true);
         setIsError(false);
         setIsLoadMoreVisible(false);
-        const { results, total_pages } = await fetchResponseData({
-          query: clientQuery,
-          page,
-          per_page: 15,
-        });
+        const { results, total_pages }: Response =
+          await fetchResponseData<Response>({
+            query: clientQuery,
+            page,
+            per_page: 15,
+          });
         setResponseData((prev) => [...prev, ...results]);
         setTotalPages(total_pages);
 
